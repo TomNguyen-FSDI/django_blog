@@ -2,9 +2,9 @@
 
 {% block content %}
     {% for post in object_list %}
-    <div class = "post-entry">
+    <div class = "post-entry" onclick="location.href='{% url 'post_detail' post.pk %}'">
         <h2>
-            <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+            <a href="{% url 'post_detail' post.pk %}">{{ post.title|capfirst }}</a>
         </h2>
         <p>{{ post.body }}</p>
     </div>

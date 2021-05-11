@@ -16,7 +16,7 @@
         <div class="container">
             <div class="nav-left">
                 {% if user.is_authenticated %}
-                <h1><a href="{% url 'home' %}">Hi {{ user.username }}</a></h1>
+                <h1><a href="{% url 'home' %}">Hi {{ user.username|capfirst }}</a></h1>
                 <a href="{% url 'logout' %}">Log out</a> | 
                 <a href="{% url 'home' %}">home</a>
                 {% else %}
