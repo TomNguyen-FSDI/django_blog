@@ -23,6 +23,15 @@
         <p class="text-center"><img src="{% static 'img/profile-picture.jpg' %}" alt="profile"></p>
         <p class="text-center">Email: Tommie_89@yahoo.com</p>
         <p class="text-center">Phone: (123) 456-7890</p>
+        <p class="text-center"><button class="btn btn-primary btn-lg" onclick="lessProfile()">Less about</button></p>
+        `;
+    }
+    function lessProfile(){
+        document.getElementById("profile-tom").innerHTML =`
+        <h1 class="display-4 text-center">The Developer</h1>
+        <p class="lead text-center">This is a FSDI Project using Django.</p>
+        <hr class="my-4">
+        <p class="text-center"><button class="btn btn-primary btn-lg" onclick="myProfile()">Learn more about me</button></p>
         `;
     }
 </script>
