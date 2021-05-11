@@ -36,3 +36,6 @@ class BlogDeleteView(DeleteView):
     template_name = "post_delete.html"
     success_url = reverse_lazy("home")  # blocking call. wait until this is done deleting and than load the home page
 
+class BlogAboutView(ListView):
+    model = Post
+    template_name = "about_me.html"

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Tom Nguyen</h1>
+    <p class="lead">Hi, I'm Tom. Please contact me by using the information below.</p>
+    <hr class="my-4">
+    <div id="profile-tom"></div>
+    
+    
+    <p class="lead">
+        <button class="btn btn-primary btn-lg" onclick="myProfile()">Learn more about me</button>
+    </p>
+  </div>
+<script>
+    function myProfile(){
+        document.getElementById("profile-tom").innerHTML = `
+        <img src="{% static 'img/profile-picture.jpg' %}" alt="profile">
+        <p class="text-center">Email: Tommie_89@yahoo.com</p>
+        <p class="text-center">Phone: (123) 456-7890</p>
+        `;
+    }
+</script>
+{% endblock content %}
