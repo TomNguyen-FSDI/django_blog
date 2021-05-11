@@ -16,7 +16,7 @@
         <div class="container">
             <div class="nav-left">
                 {% if user.is_authenticated %}
-                <h1><a href="{% url 'home' %}">Hi {{ user.username|capfirst }}</a></h1>
+                <h1 class='pt-2'><a href="{% url 'home' %}">Hi {{ user.username|capfirst }}</a></h1>
                 <a href="{% url 'logout' %}">Log out</a> | 
                 {% else %}
                 <h1><a href="{% url 'home' %}">Django blog</a></h1>
@@ -41,6 +41,8 @@
             {% block content %}
             {% endblock content %}
         </div>
+        {% else %}
+            <p class="text-center">Please login to see content</p>
         {% endif %}
         
         <div>
