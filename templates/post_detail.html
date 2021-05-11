@@ -4,6 +4,8 @@
 <div class="post-entry">
     <h2>{{ post.title|capfirst }}</h2>
     <p>{{ post.body }}</p>
+    <br>
+    <p>Posted by {{ post.author|capfirst }}</p>
     <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a> | 
     <a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a>
 {% endblock content %}

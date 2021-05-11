@@ -5,8 +5,12 @@
     <div class = "post-entry" onclick="location.href='{% url 'post_detail' post.pk %}'">
         <h2>
             <a href="{% url 'post_detail' post.pk %}">{{ post.title|capfirst }}</a>
+            <br>
+            <div class="container">
+                <p>{{ post.body }}</p>
+            </div>
         </h2>
-        <p>{{ post.body }}</p>
+        <p>Posted by {{ post.author|capfirst }}</p>
     </div>
     {% endfor %}
 
